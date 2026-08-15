@@ -1,0 +1,7 @@
+interface:
+  display_name: "Task Orchestration Router"
+  short_description: "Phase work safely with fixed Terra and Sol profiles"
+  default_prompt: "Use $task-orchestration-router to phase complex work, close delegated boundaries, protect runtime and repository state, preserve verification truth, route bounded work to Terra max, and route judgment or integration to Sol xhigh."
+
+policy:
+  allow_implicit_invocation: true

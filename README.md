@@ -61,13 +61,16 @@ The main skill loads detailed protocols only when the selected route needs them.
 
 ## Validation
 
-Run the bundled contract validator:
+Run both bundled validators:
 
 ```bash
+python scripts/validate_package.py
 python scripts/validate_contract.py
 ```
 
-The validator checks activation, topology, writer safety, repository drift, runtime freshness, verification truth, relay boundaries, model routing, and evaluation-case coverage.
+The package validator checks required files, strict UTF-8 decoding, front matter, local links, and common secret or personal-path patterns. The contract validator checks activation, topology, writer safety, repository drift, runtime freshness, verification truth, relay boundaries, model routing, and evaluation-case coverage.
+
+GitHub Actions runs both validators on Python 3.11 and 3.13. The workflow uses read-only repository permissions, does not receive repository secrets, avoids `pull_request_target`, and pins official GitHub actions to full commit SHAs.
 
 ## Compatibility notes
 
